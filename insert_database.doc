@@ -1,0 +1,112 @@
+USE test;
+
+
+INSERT INTO food_type (type_name)
+VALUES
+    ('Type 1'),
+    ('Type 2'),
+    ('Type 3'),
+    ('Type 4'),
+    ('Type 5'),
+    ('Type 6'),
+    ('Type 7'),
+    ('Type 8'),
+    ('Type 9'),
+    ('Type 10');
+
+INSERT INTO food (food_name, image, price, `desc`, type_id)
+VALUES
+    ('Food 1', 'image1.jpg', 10.5, 'Description 1', 1),
+    ('Food 2', 'image2.jpg', 15.75, 'Description 2', 2),
+    ('Food 3', 'image3.jpg', 8.99, 'Description 3', 3),
+    ('Food 4', 'image4.jpg', 20.25, 'Description 4', 1),
+    ('Food 5', 'image5.jpg', 12.0, 'Description 5', 2),
+    ('Food 6', 'image6.jpg', 18.5, 'Description 6', 3),
+    ('Food 7', 'image7.jpg', 9.99, 'Description 7', 1),
+    ('Food 8', 'image8.jpg', 14.75, 'Description 8', 2),
+    ('Food 9', 'image9.jpg', 7.5, 'Description 9', 3),
+    ('Food 10', 'image10.jpg', 22.0, 'Description 10', 1);
+
+
+    INSERT INTO sub_food (type_name, sub_price, food_id)
+VALUES
+    ('Sub Type 1', 5.99, 1),
+    ('Sub Type 2', 6.99, 2),
+    ('Sub Type 3', 4.99, 3),
+    ('Sub Type 4', 7.99, 1),
+    ('Sub Type 5', 8.99, 2),
+    ('Sub Type 6', 6.49, 3),
+    ('Sub Type 7', 5.49, 1),
+    ('Sub Type 8', 6.99, 2),
+    ('Sub Type 9', 4.99, 3),
+    ('Sub Type 10', 7.99, 1);
+
+
+INSERT INTO user (full_name, email, password)
+VALUES
+    ('User 1', 'user1@example.com', 'password1'),
+    ('User 2', 'user2@example.com', 'password2'),
+    ('User 3', 'user3@example.com', 'password3'),
+    ('User 4', 'user4@example.com', 'password4'),
+    ('User 5', 'user5@example.com', 'password5'),
+    ('User 6', 'user6@example.com', 'password6'),
+    ('User 7', 'user7@example.com', 'password7'),
+    ('User 8', 'user8@example.com', 'password8'),
+    ('User 9', 'user9@example.com', 'password9'),
+    ('User 10', 'user10@example.com', 'password10');
+
+
+INSERT INTO `order` (user_id, food_id, amount, code, arr_sub_id)
+VALUES
+    (1, 1, 2, 'CODE1', 'ARR1'),
+    (2, 2, 1, 'CODE2', 'ARR2'),
+    (3, 3, 3, 'CODE3', 'ARR3'),
+    (4, 1, 2, 'CODE4', 'ARR4'),
+    (5, 2, 1, 'CODE5', 'ARR5'),
+    (6, 3, 3, 'CODE6', 'ARR6'),
+    (7, 1, 2, 'CODE7', 'ARR7'),
+    (8, 2, 1, 'CODE8', 'ARR8'),
+    (9, 3, 3, 'CODE9', 'ARR9'),
+    (10, 1, 2, 'CODE10', 'ARR10');
+
+
+INSERT INTO restaurant (res_name, Image, `desc`)
+VALUES
+    ('Restaurant 1', 'image1.jpg', 'Description 1'),
+    ('Restaurant 2', 'image2.jpg', 'Description 2'),
+    ('Restaurant 3', 'image3.jpg', 'Description 3'),
+    ('Restaurant 4', 'image4.jpg', 'Description 4'),
+    ('Restaurant 5', 'image5.jpg', 'Description 5'),
+    ('Restaurant 6', 'image6.jpg', 'Description 6'),
+    ('Restaurant 7', 'image7.jpg', 'Description 7'),
+    ('Restaurant 8', 'image8.jpg', 'Description 8'),
+    ('Restaurant 9', 'image9.jpg', 'Description 9'),
+    ('Restaurant 10', 'image10.jpg', 'Description 10');
+
+
+    INSERT INTO like_res (user_id, res_id, date_like)
+VALUES
+    (1, 1, '2024-05-01 08:00:00'),
+    (2, 2, '2024-05-02 09:00:00'),
+    (3, 3, '2024-05-03 10:00:00'),
+    (4, 4, '2024-05-04 11:00:00'),
+    (5, 5, '2024-05-05 12:00:00'),
+    (6, 6, '2024-05-06 13:00:00'),
+    (7, 7, '2024-05-07 14:00:00'),
+    (8, 8, '2024-05-08 15:00:00'),
+    (9, 9, '2024-05-09 16:00:00'),
+    (10, 10, '2024-05-10 17:00:00');
+
+
+    INSERT INTO rate_res (user_id, res_id, amount, date_rate)
+VALUES
+    (1, 1, 5, '2024-05-01 08:00:00'),
+    (2, 2, 4, '2024-05-02 09:00:00'),
+    (3, 3, 3, '2024-05-03 10:00:00'),
+    (4, 4, 2, '2024-05-04 11:00:00'),
+    (5, 5, 1, '2024-05-05 12:00:00'),
+    (6, 6, 5, '2024-05-06 13:00:00'),
+    (7, 7, 4, '2024-05-07 14:00:00'),
+    (8, 8, 3, '2024-05-08 15:00:00'),
+    (9, 9, 2, '2024-05-09 16:00:00'),
+    (10, 10, 1, '2024-05-10 17:00:00');
