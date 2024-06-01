@@ -43,6 +43,7 @@ CREATE TABLE user(
 
 
 CREATE TABLE `order` (
+    order_id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT,
     food_id INT,
     amount INT,
@@ -63,6 +64,7 @@ CREATE TABLE restaurant (
 
 
 CREATE TABLE like_res (
+    like_res_id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT,
     res_id INT,
     date_like DATETIME,
@@ -70,7 +72,8 @@ CREATE TABLE like_res (
     FOREIGN KEY (res_id) REFERENCES restaurant(res_id)
 );
 
-CREATE TABLE rate_res (
+CREATE TABLE rate_res ( 
+    rate_res_id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT,
     res_id INT,
     amount INT,
