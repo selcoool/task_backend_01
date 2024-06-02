@@ -1,4 +1,4 @@
-USE test;
+USE data_newest;
 
 
 INSERT INTO food_type (type_name)

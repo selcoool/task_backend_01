@@ -1,8 +1,6 @@
-CREATE DATABASE IF NOT EXISTS test;
+CREATE DATABASE IF NOT EXISTS data_newest;
 
-USE test;
-
-// Tạo bản theo thứ tự
+USE data_newest;
 
 
 
@@ -49,7 +47,7 @@ CREATE TABLE `order` (
     amount INT,
     code VARCHAR(255),
     arr_sub_id VARCHAR(255),
-    FOREIGN  KEY (user_id) REFERENCES user(user_id),
+    FOREIGN  KEY (user_id) REFERENCES user(user_id) ON DELETE CASCADE,
     FOREIGN  KEY (food_id) REFERENCES food(food_id)
 );
 
@@ -68,7 +66,7 @@ CREATE TABLE like_res (
     user_id INT,
     res_id INT,
     date_like DATETIME,
-    FOREIGN KEY (user_id) REFERENCES user(user_id),
+    FOREIGN KEY (user_id) REFERENCES user(user_id) ON DELETE CASCADE,
     FOREIGN KEY (res_id) REFERENCES restaurant(res_id)
 );
 
@@ -78,7 +76,7 @@ CREATE TABLE rate_res (
     res_id INT,
     amount INT,
     date_rate DATETIME,
-    FOREIGN KEY (user_id) REFERENCES user(user_id),
+    FOREIGN KEY (user_id) REFERENCES user(user_id) ON DELETE CASCADE,
     FOREIGN KEY (res_id) REFERENCES restaurant(res_id)
 );
 
